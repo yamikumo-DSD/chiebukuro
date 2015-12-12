@@ -15,7 +15,7 @@ namespace MySpace
 	};
 
 	template<int N, class... Ts>
-	auto& get_tuple_data(tuple_data<N, Ts...>& _t) //C++14なら->decltype(get_tuple_data<N>(_t))
+	auto& get_tuple_data(tuple_data<N, Ts...>& _t) //C++11なら->decltype(get_tuple_data<N>(_t))
 	{
 		return _t.value;
 	}
@@ -27,7 +27,7 @@ namespace MySpace
 	};
 
 	template<int N, class... Ts>
-	auto& get(tuple<Ts...>& _t) //C++14なら->decltype(get_tuple_data<N>(_t))
+	auto& get(tuple<Ts...>& _t) //C++11なら->decltype(get_tuple_data<N>(_t))
 	{
 		return get_tuple_data<N>(_t);
 	}
