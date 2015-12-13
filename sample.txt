@@ -1,3 +1,2 @@
 //sample.txt
-
 //add: Register revision into index.
